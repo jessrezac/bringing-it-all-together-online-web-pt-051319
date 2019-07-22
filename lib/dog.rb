@@ -41,6 +41,7 @@ class Dog
   end
   
   def self.create(attributes)
+    binding.pry
     dog = Dog.new(attributes)
     dog.save
   end
