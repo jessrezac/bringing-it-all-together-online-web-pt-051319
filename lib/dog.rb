@@ -87,5 +87,10 @@ class Dog
     
     Dog.new_from_db(dog)
   end
+  
+  def update
+    sql = <<-SQL
+      UPDATE
+  end
     
 end
