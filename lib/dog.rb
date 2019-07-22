@@ -36,6 +36,17 @@ class Dog
     DB[:conn].execute(sql, self.name, self.breed)
     
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")
+    
     self
+  end
+  
+  def self.create(attributes)
+    dog = Dog.new
+    
+    attributes.each do |k, v|
+      self.send("#{k}", v)
+    end
+    
+    self.save
   end
 end
