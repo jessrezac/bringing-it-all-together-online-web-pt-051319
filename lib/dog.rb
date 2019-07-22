@@ -41,13 +41,11 @@ class Dog
   end
   
   def self.create(attributes)
-    binding.pry
     dog = Dog.new(attributes)
     dog.save
   end
   
   def self.new_from_db(row)
-    binding.pry
     Dog.new(id: row[0], name: row[1], breed: row[2])
   end
   
