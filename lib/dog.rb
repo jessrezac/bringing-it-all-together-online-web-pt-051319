@@ -47,6 +47,6 @@ class Dog
       dog.send("#{k}", v)
     end
     
-    self.save
+    dog.save
   end
 end
