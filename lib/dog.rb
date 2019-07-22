@@ -86,5 +86,6 @@ class Dog
     dog = DB[:conn].execute(sql, name).first
     
     Dog.new_from_db(dog)
+  end
     
 end
