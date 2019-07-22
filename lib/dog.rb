@@ -44,7 +44,7 @@ class Dog
     dog = Dog.new
     
     attributes.each do |k, v|
-      self.send("#{k}", v)
+      dog.send("#{k}", v)
     end
     
     self.save
