@@ -46,6 +46,8 @@ class Dog
   end
   
   def self.new_from_db(row)
+          binding.pry
+
     Dog.new(id: row[0], name: row[1], breed: row[2])
   end
   
@@ -69,7 +71,6 @@ class Dog
     dog = DB[:conn].execute(sql, name, breed)
     
     if !dog.empty?
-      binding.pry
       self.new_from_db(dog)
     else
       self.create(name: name, breed: breed)
